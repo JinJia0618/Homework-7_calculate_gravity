@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<meta charset="utf-8">
+<title>題目 8-2：重力改正與異常（Python 報告）</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Noto Sans TC,Roboto,Helvetica,Arial;
+      margin:2rem;line-height:1.6}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #ddd;padding:8px;text-align:left}
+th{background:#fafafa}
+.note{background:#fff8e1;border:1px solid #ffe0a3;padding:.8rem;border-radius:8px}
+</style>
+<h1>題目 8-2：重力改正與異常</h1>
+<p>產生時間：2025-11-02 15:52:33</p>
+<h2>結果總表</h2>
+<table>
+<thead><tr><th>項目</th><th>單位/說明</th><th>數值</th></tr></thead>
+<tbody>
+<tr><td>輸入 (Input)</td><td>緯度 (°N)</td><td>48.119500</td></tr>
+<tr><td>輸入 (Input)</td><td>高度/水深 (m)</td><td>487.9</td></tr>
+<tr><td>輸入 (Input)</td><td>觀測重力 g_obs (mGal)</td><td>980,717.39</td></tr>
+<tr><td>常數 (Const)</td><td>自由空氣梯度 (mGal/m)</td><td>0.3087691</td></tr>
+<tr><td>常數 (Const)</td><td>ρ_rock (kg/m³)</td><td>2670</td></tr>
+<tr><td>常數 (Const)</td><td>ρ_water (kg/m³)</td><td>1030</td></tr>
+<tr><td>(a) 理論重力 γ(φ)</td><td>(mGal)</td><td>980,901.781</td></tr>
+<tr><td>(a) 自由空氣改正 FAC (+)</td><td>(mGal)</td><td>150.648</td></tr>
+<tr><td>(a) 布格改正 岩石板 (−)</td><td>(mGal)</td><td>54.630</td></tr>
+<tr><td>(a) 自由空氣異常 Δg_FA(陸)</td><td>(mGal)</td><td>-33.743</td></tr>
+<tr><td>(a) 布格異常 Δg_B(陸)</td><td>(mGal)</td><td>-88.372</td></tr>
+<tr><td>(b) 自由空氣異常 Δg_FA(海)</td><td>(mGal)</td><td>-184.391</td></tr>
+<tr><td>(b) 海水布格改正 (+)</td><td>(mGal)</td><td>21.074</td></tr>
+<tr><td>(b) 布格異常 Δg_B(海)</td><td>(mGal)</td><td>-163.317</td></tr>
+</tbody></table>
+<div class="note">
+<b>公式（符號採用）</b><br>
+Δg_FA(陸)=g_obs−γ(φ)+FAC；　Δg_B(陸)=g_obs−γ(φ)+FAC−BC_rock。<br>
+Δg_FA(海)=g_obs−γ(φ)；　　　Δg_B(海)=g_obs−γ(φ)+BC_water。<br>
+FAC=0.3087691·h；　BC=2πGρh（mGal）。
+</div>
+</html>
